@@ -3,10 +3,10 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h1>jopa</h1>
+          <h1>A</h1>
         </div>
         <div class="col-md-6">
-          <h1>jopa</h1>
+          {{ getA }}
         </div>
       </div>
     </div>
@@ -14,12 +14,16 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  computed: {
+    ...mapGetters(['getA'])
   }
 }
 </script>
