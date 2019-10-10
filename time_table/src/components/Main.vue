@@ -7,7 +7,7 @@
 
 <script>
 import Header from './Header'
-import Table from './Table'
+import Table from './today/Table'
 
 export default {
   name: 'Main',
