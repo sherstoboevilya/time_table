@@ -10,15 +10,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Your Brand</a>
+        <a class="navbar-brand">Рассписание</a>
       </div>
 
       <!-- Collapsible Navbar -->
       <div class="collapse navbar-collapse" id="example-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link 1 <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
+          <li class="active"><router-link :to="{name: 'Table'}">Сегодня</router-link></li>
+          <li><router-link :to="{name: 'FullTable'}">Полное</router-link></li>
         </ul>
       </div>
 
@@ -33,5 +32,13 @@ export default {
 </script>
 
 <style scoped>
+  .router-link-active{
+    background: transparent !important;
+  }
+
+  .router-link-exact-active{
+    color: #555 !important;
+    background-color: #e7e7e7 !important;
+  }
 
 </style>
