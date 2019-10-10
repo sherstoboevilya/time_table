@@ -10,7 +10,7 @@
               <th>Вид</th>
               <th>Препод</th>
               <th>Время</th>
-              <th>Аудитория</th>
+              <th>Аудит</th>
             </tr>
             </thead>
             <content-table/>
