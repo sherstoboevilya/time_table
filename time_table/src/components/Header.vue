@@ -16,8 +16,8 @@
       <!-- Collapsible Navbar -->
       <div class="collapse navbar-collapse" id="example-1">
         <ul class="nav navbar-nav">
-          <li class="active" @click="closeMethod"><router-link :to="{name: 'Table'}">Сегодня</router-link></li>
-          <li @click="closeMethod"><router-link :to="{name: 'FullTable'}">Полное</router-link></li>
+          <li class="active" @click="closeMethod(1)"><a>Сегодня</a></li>
+          <li @click="closeMethod(2)"><a>Полное</a></li>
         </ul>
       </div>
     </div>
@@ -25,13 +25,14 @@
 </template>
 
 <script>
-import {mapMutations} from 'vuex'
+import {mapMutations, mapGetters} from 'vuex'
 export default {
   name: 'Header',
   methods: {
     ...mapMutations(['changeFlag']),
-    closeMethod () {
-      this.changeFlag()
+    ...mapGetters(['getFlag']),
+    closeMethod (val) {
+      this.changeFlag(val)
     }
   }
 }

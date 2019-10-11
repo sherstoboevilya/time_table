@@ -5,12 +5,12 @@ const state = {
 }
 
 const getters = {
-  getFlag: state => state
+  getFlag: state => state.flag
 }
 
 const mutations = {
-  changeFlag (state) {
-    state.flag = !state.flag
+  changeFlag (state, val) {
+    state.flag = val
   }
 }
 

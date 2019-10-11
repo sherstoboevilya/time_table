@@ -7,8 +7,10 @@ import '@/assets/js/jquery.min.js'
 import 'bootstrap3/dist/css/bootstrap.min.css'
 import 'bootstrap3/dist/js/bootstrap.min'
 import store from './store/index'
+import Multiselect from 'vue-multiselect'
 
 Vue.config.productionTip = false
+Vue.component('multiselect', Multiselect)
 
 /* eslint-disable no-new */
 new Vue({

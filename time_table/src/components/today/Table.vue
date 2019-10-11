@@ -1,11 +1,7 @@
 <template>
   <div class="hello">
-    <div class="container">
-      <div class="row">
-        <content-table v-if="flag"/>
-        <fullTable v-if="!flag"/>
-      </div>
-    </div>
+    <content-table v-if="flag === 1"/>
+    <fullTable v-if="flag === 2"/>
   </div>
 </template>
 
@@ -25,7 +21,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   h1, h2 {
     font-weight: normal;

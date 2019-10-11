@@ -1,6 +1,7 @@
 <template>
   <div class="col-sm-12 col-xs-12">
-    <table class="table table-bordered table-responsive">
+    <div class="table-responsive">
+    <table class="table table-bordered">
       <thead>
       <tr>
         <th>Дисциплина</th>
@@ -19,6 +20,7 @@
       </tr>
       </tbody>
     </table>
+    </div>
   </div>
 </template>
 

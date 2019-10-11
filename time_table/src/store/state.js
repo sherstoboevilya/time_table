@@ -1,5 +1,5 @@
 module.exports = {
-  flag: true,
+  flag: 1,
   monday: {
     first: {
       subject: 'ОПЗУ',
@@ -118,7 +118,7 @@ module.exports = {
       subject: 'Оценка бизнеса',
       type: 'сем',
       prepod: 'Иванюк Т.Н.',
-      time: '14.00-13.50',
+      time: '14.00-14.50',
       audit: '510'
     },
     third: {
