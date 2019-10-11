@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-xs-12">
-          <table class="table table-bordered">
+          <table class="table table-bordered table-responsive">
             <thead>
             <tr>
               <th>Дисциплина</th>
@@ -13,7 +13,14 @@
               <th>Аудит</th>
             </tr>
             </thead>
-            <content-table/>
+            <tbody v-for="(day, key, index) in fullTable">
+            <tr class="table-header">
+              <td colspan="5">{{ nameDay[index] }}</td>
+            </tr>
+            <tr v-for="lession in day">
+              <td v-for="subj in lession">{{ subj }}</td>
+            </tr>
+            </tbody>
           </table>
         </div>
       </div>
@@ -22,10 +29,18 @@
 </template>
 
 <script>
-import ContentTable from './contentTable'
+import {mapGetters} from 'vuex'
+
 export default {
   name: 'Table',
-  components: {ContentTable}
+  data () {
+    return {
+      nameDay: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница']
+    }
+  },
+  computed: {
+    ...mapGetters({fullTable: 'getFullTable'})
+  }
 }
 </script>
 
@@ -45,4 +60,11 @@ li {
 a {
   color: #42b983;
 }
+
+  .table-header{
+    text-align: center;
+    background: aliceblue;
+    font-size: 20px;
+    font-weight: 600;
+  }
 </style>

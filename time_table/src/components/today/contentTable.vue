@@ -16,7 +16,8 @@ export default {
       today: null,
       date: null,
       time: null,
-      HM: null
+      HM: null,
+      myInterval: null
     }
   },
   computed: {
@@ -72,10 +73,13 @@ export default {
   watch: {
     today () {
       this.getClass()
-      setInterval(() => {
+      this.myInterval = setInterval(() => {
         this.getClass()
-      }, 5000)
+      }, 1000)
     }
+  },
+  destroyed () {
+    clearInterval(this.myInterval)
   }
 }
 </script>

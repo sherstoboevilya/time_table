@@ -4,7 +4,7 @@
 
       <!-- Brand/logo -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#example-1" aria-expanded="false">
+        <button ref="closeNavBtn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#example-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -16,18 +16,22 @@
       <!-- Collapsible Navbar -->
       <div class="collapse navbar-collapse" id="example-1">
         <ul class="nav navbar-nav">
-          <li class="active"><router-link :to="{name: 'Table'}">Сегодня</router-link></li>
-          <li><router-link :to="{name: 'FullTable'}">Полное</router-link></li>
+          <li class="active" @click="closeButton"><router-link :to="{name: 'Table'}">Сегодня</router-link></li>
+          <li @click="closeButton"><router-link :to="{name: 'FullTable'}">Полное</router-link></li>
         </ul>
       </div>
-
     </div>
   </nav>
 </template>
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  methods: {
+    closeButton () {
+      this.$refs.closeNavBtn.click()
+    }
+  }
 }
 </script>
 

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-xs-12">
-          <table class="table table-bordered">
+          <table class="table table-bordered table-responsive">
             <thead>
             <tr>
               <th>Дисциплина</th>

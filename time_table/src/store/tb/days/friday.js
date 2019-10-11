@@ -1,4 +1,4 @@
-import {friday} from '../state'
+import {friday} from '../../state'
 
 const state = {
   ...friday
