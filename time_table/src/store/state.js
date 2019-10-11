@@ -1,4 +1,5 @@
 module.exports = {
+  flag: true,
   monday: {
     first: {
       subject: 'ОПЗУ',

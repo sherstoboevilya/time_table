@@ -1,9 +1,22 @@
 <template>
-  <tbody>
-  <tr v-for="(subject, index) in today" :key="index" ref="myTr">
-    <td v-for="(value, index) in subject" :key="index">{{ value }}</td>
-  </tr>
-  </tbody>
+  <div class="col-sm-12 col-xs-12">
+    <table class="table table-bordered table-responsive">
+      <thead>
+      <tr>
+        <th>Дисциплина</th>
+        <th>Вид</th>
+        <th>Препод</th>
+        <th>Время</th>
+        <th>Аудит</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr v-for="(subject, index) in today" :key="index" ref="myTr">
+        <td v-for="(value, index) in subject" :key="index">{{ value }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script>

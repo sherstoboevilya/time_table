@@ -41,6 +41,7 @@ export default {
   computed: {
     ...mapGetters({fullTable: 'getFullTable'})
   }
+
 }
 </script>
 

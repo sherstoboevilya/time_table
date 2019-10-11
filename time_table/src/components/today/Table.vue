@@ -2,20 +2,8 @@
   <div class="hello">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-xs-12">
-          <table class="table table-bordered table-responsive">
-            <thead>
-            <tr>
-              <th>Дисциплина</th>
-              <th>Вид</th>
-              <th>Препод</th>
-              <th>Время</th>
-              <th>Аудит</th>
-            </tr>
-            </thead>
-            <content-table/>
-          </table>
-        </div>
+        <content-table v-if="flag"/>
+        <fullTable v-if="!flag"/>
       </div>
     </div>
   </div>
@@ -23,26 +11,37 @@
 
 <script>
 import ContentTable from './contentTable'
+import {mapGetters} from 'vuex'
+import fullTable from './fullTable'
+
 export default {
   name: 'Table',
-  components: {ContentTable}
+  components: {ContentTable, fullTable},
+  computed: {
+    ...mapGetters({
+      flag: 'getFlag'
+    })
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  h1, h2 {
+    font-weight: normal;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  a {
+    color: #42b983;
+  }
 </style>
